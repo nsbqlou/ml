@@ -1,2 +1,17 @@
 re 模块 正则表达式
 re.sub(r'...  中的r表示原生字符串 即不用担心是否漏写了反斜杠
+使用re替换string中每一个匹配的子串后返回替换后的字符串。
+
+格式：
+
+re.sub(pattern, repl, string, count)
+
+import re
+text = "JGood is a handsome boy, he is cool, clever, and so on..."
+print(re.sub(r'\s+', '-', text))
+执行结果如下：
+JGood-is-a-handsome-boy,-he-is-cool,-clever,-and-so-on...
+
+其中第二个函数是替换后的字符串；本例中为'-'
+
+第四个参数指替换个数。默认为0，表示每个匹配项都替换。
